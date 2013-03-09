@@ -23,5 +23,13 @@
 
 <?php wp_footer(); ?>
 
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/jquery.fittext.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/prefixfree.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/fitvids.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/responsiveslides.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/villo.js"></script>
+
 </body>
 </html>

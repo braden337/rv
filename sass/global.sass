@@ -156,7 +156,7 @@ article
   padding: 20px
   h1
     color: $night
-  .entry-content
+  .entry-content, .entry-title
     position: relative
     z-index: 1
     p
@@ -171,13 +171,23 @@ article
     border-left: 55px solid transparent
     border-right: 55px solid transparent
     border-top: 55px solid #C44032
-  .entry-meta
+  .entry-time
     position: absolute
     top: 0
     right: 32px
     time
       color: $yello
 
+
+.assistive-text, .cat-links, .entry-meta
+  display: none
+.previous, .next
+  width: $wide
+  +flowwide
+  margin: 0 auto
+  color: $night
+.next
+  text-align: right
 
 
 

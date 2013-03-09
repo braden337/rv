@@ -147,6 +147,14 @@ function rv_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'rv_scripts' );
 
+
+function exclude_videos( $query ) {
+    if ( $query->is_home() && $query->is_main_query() ) {
+        $query->set( 'cat', '-2' );
+    }
+}
+add_action( 'pre_get_posts', 'exclude_videos' );
+
 /**
  * Implement the Custom Header feature
  */
