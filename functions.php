@@ -155,6 +155,13 @@ function exclude_videos( $query ) {
 }
 add_action( 'pre_get_posts', 'exclude_videos' );
 
+function include_videos( $query ) {
+    if ( $query->is_page(2) && $query->is_main_query() ) {
+        $query->set( 'cat', '2' );
+    }
+}
+add_action( 'pre_get_posts', 'include_videos' );
+
 /**
  * Implement the Custom Header feature
  */

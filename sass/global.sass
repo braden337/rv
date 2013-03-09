@@ -27,7 +27,7 @@ $wide: 60%
 
 =sealmargin
   &:last-child
-    margin-bottom: 0
+    margin-right: 0
 
 =bottomspacing
   margin-bottom: 20px
@@ -37,7 +37,7 @@ $wide: 60%
   margin: 0
   padding: 0
   box-sizing: border-box
-  font-family: Ubuntu
+  //font-family: Ubuntu
 
 
 a
@@ -49,8 +49,8 @@ a
 
 
 body
-  background: $light
-
+  background-color: $light
+  //background-image: url(../images/debut_dark.png)
 
 
 
@@ -61,6 +61,7 @@ body
 /* ============== H E A D E R =============== */
 
 .site-header
+  font-family: Ubuntu
   text-align: center
 
 .site-title
@@ -80,6 +81,8 @@ body
     li
       display: inline
       margin-right: 10px
+      @include flow($saps)
+        margin-right: 6px
       +sealmargin
       a
         &:link, &:visited
@@ -91,7 +94,7 @@ body
         &:hover
           color: $yello
 
-.current_page_item
+.current-menu-item
   a
     &:link, &:visited
       color: $yello !important
@@ -144,6 +147,7 @@ body
 .site-content
   +bottomspacing
 article
+  font-family: Ubuntu
   position: relative
   margin: 0 auto
   background-color: $creamygoodness
@@ -152,7 +156,7 @@ article
   width: $wide
   +flowwide
   +bottomspacing
-  +sealmargin
+  //+sealmargin
   padding: 20px
   h1
     color: $night
@@ -161,7 +165,7 @@ article
     z-index: 1
     p
       margin-bottom: 10px
-      +sealmargin
+      //+sealmargin
   .triangle
     position: absolute
     right: 10px
@@ -170,7 +174,7 @@ article
     height: 0
     border-left: 55px solid transparent
     border-right: 55px solid transparent
-    border-top: 55px solid #C44032
+    border-top: 55px solid $honda
   .entry-time
     position: absolute
     top: 0
@@ -179,9 +183,10 @@ article
       color: $yello
 
 
-.assistive-text, .cat-links, .entry-meta
+.assistive-text, .cat-links, entry-meta, .site-description, .menu-toggle, .page-title, .site-info
   display: none
 .previous, .next
+  font-family: 'Source Sans Pro'
   width: $wide
   +flowwide
   margin: 0 auto
@@ -189,17 +194,28 @@ article
 .next
   text-align: right
 
+.edit-link
+  position: absolute
+  right: 20px
+  bottom: 10px
+  background: $light
+  color: $creamygoodness
 
-
+.comments-link, .sep
+  display: none
 
 
 /* ============== F O O T E R =============== */
 
 .site-footer
+  background-color: rgba(#bada55, .60)
+  height: 150px
+  padding-top: 55px
   text-align: center
   color: $night
-  font: 14px Source Sans
-  +bottomspacing
+  font-family: 'Source Sans Pro'
+  font-size: 14px
+  //+bottomspacing
 
 
 

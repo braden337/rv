@@ -18,6 +18,7 @@
 			<span class="sep"> | </span>
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'rv' ), 'thirtyseven', '<a href="http://twitter.com/braden337" rel="designer">Braden Jonsson</a>' ); ?>
 		</div><!-- .site-info -->
+    &copy <?php echo date('Y'); ?> Zhoda International Raceway<br><a href="tel:2047924757">(204) 792-4757</a>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
