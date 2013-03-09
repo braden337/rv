@@ -1,0 +1,201 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700)
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro)
+
+
+
+
+$creamygoodness: darken(#F4F1DE, 10%)
+$yello: darken(#ff0, 5%)
+$light: #006D99
+$night: #003A52
+$honda: #C44032
+
+
+$villo: 1000px
+$stew: 800px
+$saps: 640px
+
+$wide: 60%
+
+@mixin flow($screen-width)
+  @media (max-width: $screen-width)
+    @content
+
+=flowwide
+  @include flow($saps)
+    width: 90%
+
+=sealmargin
+  &:last-child
+    margin-bottom: 0
+
+=bottomspacing
+  margin-bottom: 20px
+
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: Ubuntu
+
+
+a
+  &:link, &:visited
+    text-decoration: none
+    color: inherit
+  &:hover
+    color: inherit
+
+
+body
+  background: $light
+
+
+
+
+
+
+
+
+/* ============== H E A D E R =============== */
+
+.site-header
+  text-align: center
+
+.site-title
+  color: $yello
+  text-shadow: 5px 5px 0 $night
+  margin-bottom: 5px
+
+#site-navigation
+  +bottomspacing
+  ul
+    border-top: 2px $night solid
+    border-bottom: 2px $night solid
+    margin: 0 auto
+    padding: 5px 0
+    width: $wide
+    +flowwide
+    li
+      display: inline
+      margin-right: 10px
+      +sealmargin
+      a
+        &:link, &:visited
+          color: $night
+          font: bold 20px Ubuntu
+          padding: 5px 0
+          @include flow($saps)
+            font-size: 15px
+        &:hover
+          color: $yello
+
+.current_page_item
+  a
+    &:link, &:visited
+      color: $yello !important
+
+
+
+
+.rslides
+  position: relative
+  list-style: none
+  overflow: hidden
+  width: $wide
+  +flowwide
+  padding: 0
+  margin: 0 auto
+  +bottomspacing
+  li
+    -webkit-backface-visibility: hidden
+    position: absolute
+    display: none
+    width: 100%
+    left: 0
+    top: 0
+    &:first-child
+      position: relative
+      display: block
+      float: left
+  img
+    display: block
+    height: auto
+    float: left
+    width: 100%
+    border: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============== C O N T E N T =============== */
+
+.site-content
+  +bottomspacing
+article
+  position: relative
+  margin: 0 auto
+  background-color: $creamygoodness
+  border-radius: 5px
+  border: 1px $night solid
+  width: $wide
+  +flowwide
+  +bottomspacing
+  +sealmargin
+  padding: 20px
+  h1
+    color: $night
+  .entry-content
+    position: relative
+    z-index: 1
+    p
+      margin-bottom: 10px
+      +sealmargin
+  .triangle
+    position: absolute
+    right: 10px
+    top: -5px
+    width: 0
+    height: 0
+    border-left: 55px solid transparent
+    border-right: 55px solid transparent
+    border-top: 55px solid #C44032
+  .entry-meta
+    position: absolute
+    top: 0
+    right: 32px
+    time
+      color: $yello
+
+
+
+
+
+
+/* ============== F O O T E R =============== */
+
+.site-footer
+  text-align: center
+  color: $night
+  font: 14px Source Sans
+  +bottomspacing
+
+
+
+
+
+
+
+
+
