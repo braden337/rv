@@ -289,3 +289,9 @@ img#wpstats {
 .contact-form div input {
   max-width: 100%;
 }
+@media (max-width: 640px) {
+  /* line 294, ../sass/global.sass */
+  .contact-form div textarea {
+    width: 100%;
+  }
+}
