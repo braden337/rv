@@ -284,3 +284,8 @@ article .entry-time time {
 img#wpstats {
   display: none;
 }
+
+/* line 291, ../sass/global.sass */
+.contact-form div input {
+  max-width: 100%;
+}
