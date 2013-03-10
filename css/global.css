@@ -281,6 +281,6 @@ article .entry-time time {
 }
 
 /* line 284, ../sass/global.sass */
-img #wpstats {
+img#wpstats {
   display: none;
 }
