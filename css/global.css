@@ -1,46 +1,53 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
-/* line 36, ../sass/global.sass */
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+/* fontawesome */
+/* line 7, ../sass/global.sass */
+[class*="fontawesome-"]:before {
+  font-family: "FontAwesome", sans-serif;
+}
+
+/* line 39, ../sass/global.sass */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* line 44, ../sass/global.sass */
+/* line 47, ../sass/global.sass */
 a:link, a:visited {
   text-decoration: none;
   color: inherit;
 }
-/* line 47, ../sass/global.sass */
+/* line 50, ../sass/global.sass */
 a:hover {
   color: inherit;
 }
 
-/* line 51, ../sass/global.sass */
+/* line 54, ../sass/global.sass */
 body {
   background-color: #006d99;
 }
 
 /* ============== H E A D E R =============== */
-/* line 63, ../sass/global.sass */
+/* line 66, ../sass/global.sass */
 .site-header {
   font-family: Ubuntu;
   text-align: center;
 }
 
-/* line 67, ../sass/global.sass */
+/* line 70, ../sass/global.sass */
 .site-title {
   color: #e5e600;
   text-shadow: 5px 5px 0 #003a52;
   margin-bottom: 5px;
 }
 
-/* line 72, ../sass/global.sass */
+/* line 75, ../sass/global.sass */
 #site-navigation {
   margin-bottom: 20px;
 }
-/* line 74, ../sass/global.sass */
+/* line 77, ../sass/global.sass */
 #site-navigation ul {
   border-top: 2px #003a52 solid;
   border-bottom: 2px #003a52 solid;
@@ -49,49 +56,49 @@ body {
   width: 60%;
 }
 @media (max-width: 640px) {
-  /* line 74, ../sass/global.sass */
+  /* line 77, ../sass/global.sass */
   #site-navigation ul {
     width: 90%;
   }
 }
-/* line 81, ../sass/global.sass */
+/* line 84, ../sass/global.sass */
 #site-navigation ul li {
   display: inline;
   margin-right: 10px;
 }
 @media (max-width: 640px) {
-  /* line 81, ../sass/global.sass */
+  /* line 84, ../sass/global.sass */
   #site-navigation ul li {
     margin-right: 6px;
   }
 }
-/* line 29, ../sass/global.sass */
+/* line 32, ../sass/global.sass */
 #site-navigation ul li:last-child {
   margin-right: 0;
 }
-/* line 88, ../sass/global.sass */
+/* line 91, ../sass/global.sass */
 #site-navigation ul li a:link, #site-navigation ul li a:visited {
   color: #003a52;
   font: bold 20px Ubuntu;
   padding: 5px 0;
 }
 @media (max-width: 640px) {
-  /* line 88, ../sass/global.sass */
+  /* line 91, ../sass/global.sass */
   #site-navigation ul li a:link, #site-navigation ul li a:visited {
     font-size: 15px;
   }
 }
-/* line 94, ../sass/global.sass */
+/* line 97, ../sass/global.sass */
 #site-navigation ul li a:hover {
   color: #e5e600;
 }
 
-/* line 99, ../sass/global.sass */
+/* line 102, ../sass/global.sass */
 .current-menu-item a:link, .current-menu-item a:visited {
   color: #e5e600 !important;
 }
 
-/* line 105, ../sass/global.sass */
+/* line 108, ../sass/global.sass */
 .rslides {
   position: relative;
   list-style: none;
@@ -102,12 +109,12 @@ body {
   margin-bottom: 20px;
 }
 @media (max-width: 640px) {
-  /* line 105, ../sass/global.sass */
+  /* line 108, ../sass/global.sass */
   .rslides {
     width: 90%;
   }
 }
-/* line 114, ../sass/global.sass */
+/* line 117, ../sass/global.sass */
 .rslides li {
   -webkit-backface-visibility: hidden;
   position: absolute;
@@ -116,13 +123,13 @@ body {
   left: 0;
   top: 0;
 }
-/* line 121, ../sass/global.sass */
+/* line 124, ../sass/global.sass */
 .rslides li:first-child {
   position: relative;
   display: block;
   float: left;
 }
-/* line 125, ../sass/global.sass */
+/* line 128, ../sass/global.sass */
 .rslides img {
   display: block;
   height: auto;
@@ -132,12 +139,13 @@ body {
 }
 
 /* ============== C O N T E N T =============== */
-/* line 147, ../sass/global.sass */
+/* line 150, ../sass/global.sass */
 .site-content {
   margin-bottom: 20px;
+  margin: 0 auto;
 }
 
-/* line 149, ../sass/global.sass */
+/* line 154, ../sass/global.sass */
 article {
   font-family: Ubuntu;
   position: relative;
@@ -150,25 +158,25 @@ article {
   padding: 20px;
 }
 @media (max-width: 640px) {
-  /* line 149, ../sass/global.sass */
+  /* line 154, ../sass/global.sass */
   article {
     width: 90%;
   }
 }
-/* line 161, ../sass/global.sass */
+/* line 166, ../sass/global.sass */
 article h1 {
   color: #003a52;
 }
-/* line 163, ../sass/global.sass */
+/* line 168, ../sass/global.sass */
 article .entry-content, article .entry-title {
   position: relative;
   z-index: 1;
 }
-/* line 166, ../sass/global.sass */
+/* line 171, ../sass/global.sass */
 article .entry-content p, article .entry-title p {
   margin-bottom: 10px;
 }
-/* line 169, ../sass/global.sass */
+/* line 174, ../sass/global.sass */
 article .triangle {
   position: absolute;
   right: 10px;
@@ -179,42 +187,54 @@ article .triangle {
   border-right: 55px solid transparent;
   border-top: 55px solid #c44032;
 }
-/* line 178, ../sass/global.sass */
+/* line 183, ../sass/global.sass */
 article .entry-time {
   position: absolute;
   top: 0;
   right: 32px;
 }
-/* line 182, ../sass/global.sass */
+/* line 187, ../sass/global.sass */
 article .entry-time time {
   color: #e5e600;
 }
 
-/* line 186, ../sass/global.sass */
-.assistive-text, .cat-links, entry-meta, .site-description, .menu-toggle, .page-title, .site-info {
+/* line 191, ../sass/global.sass */
+.assistive-text, .cat-links, .site-description, .menu-toggle, .page-title, .site-info {
   display: none;
 }
 
-/* line 188, ../sass/global.sass */
-.previous, .next {
-  font-family: "Source Sans Pro";
+/* line 195, ../sass/global.sass */
+.entry-header .entry-meta {
+  display: none;
+}
+
+/* line 198, ../sass/global.sass */
+.navigation-post, .navigation-paging {
   width: 60%;
-  margin: 0 auto;
-  color: #003a52;
+  margin: 0 auto 60px auto;
 }
 @media (max-width: 640px) {
-  /* line 188, ../sass/global.sass */
-  .previous, .next {
+  /* line 198, ../sass/global.sass */
+  .navigation-post, .navigation-paging {
     width: 90%;
   }
 }
 
-/* line 194, ../sass/global.sass */
+/* line 202, ../sass/global.sass */
+.previous, .next {
+  font-family: "Source Sans Pro";
+  margin: 0 auto;
+  width: 50%;
+  color: #003a52;
+  float: left;
+}
+
+/* line 208, ../sass/global.sass */
 .next {
   text-align: right;
 }
 
-/* line 197, ../sass/global.sass */
+/* line 211, ../sass/global.sass */
 .edit-link {
   position: absolute;
   right: 20px;
@@ -223,14 +243,15 @@ article .entry-time time {
   color: #e7e1b8;
 }
 
-/* line 204, ../sass/global.sass */
+/* line 221, ../sass/global.sass */
 .comments-link, .sep {
   display: none;
 }
 
 /* ============== F O O T E R =============== */
-/* line 210, ../sass/global.sass */
+/* line 227, ../sass/global.sass */
 .site-footer {
+  clear: both;
   background-color: rgba(186, 218, 85, 0.6);
   height: 150px;
   padding-top: 55px;
@@ -238,4 +259,23 @@ article .entry-time time {
   color: #003a52;
   font-family: "Source Sans Pro";
   font-size: 14px;
+}
+
+/* Flexible iFrame */
+/* line 265, ../sass/global.sass */
+.Flexible-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 272, ../sass/global.sass */
+.Flexible-container iframe, .Flexible-container object, .Flexible-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

@@ -1,8 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700)
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro)
 
+@import url(http://weloveiconfonts.com/api/?family=fontawesome)
 
-
+/* fontawesome */
+[class*="fontawesome-"]:before
+  font-family: 'FontAwesome', sans-serif
 
 $creamygoodness: darken(#F4F1DE, 10%)
 $yello: darken(#ff0, 5%)
@@ -146,6 +149,8 @@ body
 
 .site-content
   +bottomspacing
+  //width: 60%
+  margin: 0 auto
 article
   font-family: Ubuntu
   position: relative
@@ -183,14 +188,23 @@ article
       color: $yello
 
 
-.assistive-text, .cat-links, entry-meta, .site-description, .menu-toggle, .page-title, .site-info
+.assistive-text, .cat-links, .site-description, .menu-toggle, .page-title, .site-info
   display: none
-.previous, .next
-  font-family: 'Source Sans Pro'
+
+.entry-header
+  .entry-meta
+    display: none
+
+.navigation-post, .navigation-paging
   width: $wide
   +flowwide
+  margin: 0 auto 60px auto
+.previous, .next
+  font-family: 'Source Sans Pro'
   margin: 0 auto
+  width: 50%
   color: $night
+  float: left
 .next
   text-align: right
 
@@ -201,6 +215,9 @@ article
   background: $light
   color: $creamygoodness
 
+.page-links
+  //display: inline
+
 .comments-link, .sep
   display: none
 
@@ -208,6 +225,7 @@ article
 /* ============== F O O T E R =============== */
 
 .site-footer
+  clear: both
   background-color: rgba(#bada55, .60)
   height: 150px
   padding-top: 55px
@@ -222,6 +240,41 @@ article
 
 
 
+
+
+
+
+
+
+
+.comments-area
+  //background-image: url(../images/debut_dark.png)
+  //background-color: rgba(red, .25)
+
+
+
+
+
+
+
+
+
+
+/* Flexible iFrame */
+
+.Flexible-container
+  position: relative
+  padding-bottom: 56.25%
+  padding-top: 30px
+  height: 0
+  overflow: hidden
+
+.Flexible-container iframe, .Flexible-container object, .Flexible-container embed
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
 
 
 
