@@ -16,7 +16,11 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
-
+                <ul class="rslides">
+                  <li><img src="<?php bloginfo('template_url'); ?>/images/track.jpg" /></li>
+                  <li><img src="<?php bloginfo('template_url'); ?>/images/water_truck.jpg" /></li>
+                  <li><img src="<?php bloginfo('template_url'); ?>/images/jump_face.jpg" /></li>
+                </ul>
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
