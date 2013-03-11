@@ -12,7 +12,8 @@
 			$postcat = $category[0]->cat_name;
 			if ($postcat == "Updates") {
 			echo "fontawesome-twitter";
-		} ?>"><!--<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'rv' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">--><?php the_title(); ?><!--</a>--></h1>
+		} ?>"><!--<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'rv' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">--><?php if ($postcat != "Updates") {
+		the_title(); }?><!--</a>--></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
